@@ -1,0 +1,134 @@
+*{
+  box-sizing: border-box;
+}
+.App {
+  text-align: center;
+  margin: auto;
+}
+.navbar{
+  margin: auto;
+  background-color: black;
+  color: white;
+  display: flex;
+  padding: 20px 300px 20px ;
+}
+.navbar a{
+  color: white;
+  text-decoration: none;
+}
+.dropdown{
+  border: none;
+  text-decoration: none;
+  background: none;
+  background-color: black;
+  color: white;
+}
+.left{
+  display: flex;
+  gap: 50px;
+}
+.right{
+  margin-left: 50px;
+  display: flex;
+  gap: 10px;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden; 
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 90%;
+  /* left: 0;  */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float :left;
+  width: 33.33%;
+  padding: 10px;
+  background-color: black;
+  height: 600px;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.column p{
+  width: 50%;
+  margin: auto;
+}
+.left a, .left img {
+  float: none;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.column a:hover {
+  background-color: #ddd;
+}
+.column h3:hover {
+  color: #ff622d;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.footbox{
+  justify-content: center;
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  gap: 50px;
+}
+.foottop{
+  justify-content: center;
+  display: flex;
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  gap: 50px; 
+  margin-bottom: 10px;
+}
+.footbottom{
+  justify-content: center;
+  display: flex;
+  gap:100px;
+}
+.footbottom h6{
+  color: gray;
+}
+.footbottom h6:hover{
+  color: white ;
+}
