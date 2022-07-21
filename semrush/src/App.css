@@ -107,7 +107,7 @@
 }
 .footbox{
   justify-content: center;
-  margin-top: 10px;
+  margin-top: -10px;
   background-color: black;
   color: white;
   gap: 50px;
