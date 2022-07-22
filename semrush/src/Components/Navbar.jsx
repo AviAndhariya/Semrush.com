@@ -150,6 +150,8 @@ export default function Navbar() {
             border: "1px solid white",
             borderRadius: "5px",
             width: "80px",
+            height:"40px",
+            alignSelf:"center"
           }}
         >
           Log In
@@ -160,6 +162,8 @@ export default function Navbar() {
             color: "white",
             borderRadius: "5px",
             width: "100px",
+            height:"40px",
+            alignSelf:"center"
           }}
         >
           Sign Up
