@@ -1,18 +1,38 @@
+import React, { Component } from "react";
+import Slider from "react-slick";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+
 export default function HomeTop() {
+  const slider = React.useRef(null);
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  };
+
   return (
-    <div>
-      <h1 style={{ fontSize: "56px", color: "black" }}>
+    <div
+      style={{
+        // marginTop: "-40px",
+        backgroundColor: "#421983",
+        paddingTop:"80px",
+      }}
+    >
+      <h1 style={{ fontSize: "56px", color: "white",marginBottom:"40px"}}>
         Get measurable results
         <br /> from online marketing
       </h1>
-      <p style={{ fontSize: "21px" }}>
+      <p style={{ fontSize: "21px", color:"white" }}>
         Do SEO, content marketing, competitor research,
         <br />
         PPC and social media marketing from just one platform.
       </p>
       <div>
         <input
-          style={{ width: "600px", height: "60px" }}
+          style={{ width: "600px", height: "60px", marginTop:"40px",marginBottom:"60px" }}
           placeholder="Enter domain, keyword or URL"
           type="text"
         />
@@ -32,10 +52,50 @@ export default function HomeTop() {
         >
           Start now
         </button>
-        <h5 style={{ fontSize: "17px" }}>
+        <h5 style={{ fontSize: "23px", color:"grey" ,marginTop:"20px",marginBottom:"50px"}}>
           Trusted by the world’s leading brands
         </h5>
-        <h1 style={{ fontSize: "45px" }}>See what's inside</h1>
+        <div
+          style={{
+            // width: "80%",
+            display: "flex",
+            gap: "100px",
+            justifyContent:"center",
+            marginBottom:"180px"
+          }}
+        >
+          <img
+            style={{ backgroundColor: "black" }}
+            src="https://cdn.semrush.com/static/index/logos/Amazon_logo.9f5bdb154006.svg"
+            alt="logo"
+          />
+          <img
+            style={{ backgroundColor: "black" }}
+            src="https://cdn.semrush.com/static/index/logos/Decathlon_logo.867c20390207.svg"
+            alt="logo"
+          />
+          <img
+            style={{ backgroundColor: "black" }}
+            src="https://cdn.semrush.com/static/index/logos/Tesla_logo.f58ace4c9fc6.svg"
+            alt="logo"
+          />
+          <img
+            style={{ backgroundColor: "black" }}
+            src="https://cdn.semrush.com/static/index/logos/Quora_logo.38ca9be29021.svg"
+            alt="logo"
+          />
+          <img
+            style={{ backgroundColor: "black" }}
+            src="https://cdn.semrush.com/static/index/logos/P&G_logo.310c6107f51e.svg"
+            alt="logo"
+          />
+          <img
+            style={{ backgroundColor: "black" }}
+            src="https://cdn.semrush.com/static/index/logos/Forbes_logo.d98a659660b4.svg"
+            alt="logo"
+          />
+        </div>
+        <h1 style={{ fontSize: "45px", color:"white",marginTop:"20px"  }}>See what's inside</h1>
         <div
           style={{
             backgroundColor: "white",
@@ -43,6 +103,7 @@ export default function HomeTop() {
             width: "60%",
             margin: "auto",
             height: "500px",
+            marginBottom:"100px"
           }}
         ></div>
         <h1 style={{ fontSixe: "45px" }}>
@@ -53,6 +114,7 @@ export default function HomeTop() {
         </h1>
         <img
           style={{
+            backgroundColor: "#421983",
             borderRaidus: "50%",
             height: "120px",
           }}
@@ -67,7 +129,8 @@ export default function HomeTop() {
         </p>
       </div>
       <div>
-        <h1 style={{ fontSize: "45px" }}>
+              
+        <h1 style={{marginTop:"100px", fontSize: "45px" }}>
           Award-winning tools trusted <br />
           by the world’s leading companies
         </h1>
@@ -98,7 +161,7 @@ export default function HomeTop() {
             </p>
           </div>
         </div>
-        <div style={{ display: "flex", width: "60%", margin: "auto" }}>
+        <div style={{ display: "flex", width: "60%", margin: "auto",marginTop:"100px" }}>
           <div
             style={{
               margin: "auto",
@@ -130,62 +193,75 @@ export default function HomeTop() {
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
-              marginTop: "20px",
-              gap: "20px",
+              width: "515px",
+              height: "471px",
+              backgroundImage: `url("https://www.semrush.com/static/images/stats_illustration.d45802603735a38e20d66876f93eca0c.svg")`,
             }}
           >
             <div
               style={{
-                padding: "0px, 80px",
-                border: "1px solid black",
-                borderRadius: "10px",
-                height: "180px",
-                width: "250px",
+                display: "flex",
+                flexDirection: "column",
+                marginTop: "20px",
+                gap: "20px",
               }}
             >
-              <h1 style={{ fontSize: "50px" }}>21B</h1>
-              <p style={{ fontSize: "16px" }}>keyords</p>
+              <div
+                style={{
+                  padding: "0px, 80px",
+                  border: "1px solid black",
+                  borderRadius: "10px",
+                  height: "180px",
+                  width: "250px",
+                  backgroundColor: "white",
+                }}
+              >
+                <h1 style={{ fontSize: "50px" }}>21B</h1>
+                <p style={{ fontSize: "16px" }}>keyords</p>
+              </div>
+              <div
+                style={{
+                  border: "1px solid black",
+                  borderRadius: "10px",
+                  height: "180px",
+                  width: "250px",
+                  backgroundColor: "white",
+                }}
+              >
+                <h1 style={{ fontSize: "50px" }}>43T</h1>
+                <p style={{ fontSize: "16px" }}>backlinks</p>
+              </div>
             </div>
-            <div
-              style={{
-                border: "1px solid black",
-                borderRadius: "10px",
-                height: "180px",
-                width: "250px",
-              }}
-            >
-              <h1 style={{ fontSize: "50px" }}>43T</h1>
-              <p style={{ fontSize: "16px" }}>backlinks</p>
-            </div>
-          </div>
-          <div style={{ margin: "20px" }}>
-            <div
-              style={{
-                border: "1px solid black",
-                marginBottom: "20px",
-                borderRadius: "10px",
-                height: "180px",
-                width: "250px",
-              }}
-            >
-              <h1 style={{ fontSize: "50px" }}>808M</h1>
-              <p style={{ fontSize: "16px" }}>domain profiles</p>
-            </div>
-            <div
-              style={{
-                border: "1px solid black",
-                borderRadius: "10px",
-                height: "180px",
-                width: "250px",
-              }}
-            >
-              <h1 style={{ fontSize: "50px" }}>140</h1>
-              <p style={{ fontSize: "16px" }}>geo databases</p>
+            <div style={{ margin: "20px" }}>
+              <div
+                style={{
+                  border: "1px solid black",
+                  marginBottom: "20px",
+                  borderRadius: "10px",
+                  height: "180px",
+                  width: "250px",
+                  backgroundColor: "white",
+                }}
+              >
+                <h1 style={{ fontSize: "50px" }}>808M</h1>
+                <p style={{ fontSize: "16px" }}>domain profiles</p>
+              </div>
+              <div
+                style={{
+                  border: "1px solid black",
+                  borderRadius: "10px",
+                  height: "180px",
+                  width: "250px",
+                  backgroundColor: "white",
+                }}
+              >
+                <h1 style={{ fontSize: "50px" }}>140</h1>
+                <p style={{ fontSize: "16px" }}>geo databases</p>
+              </div>
             </div>
           </div>
         </div>
-        <div style={{ display: "flex", margin: "auto" }}>
+        <div style={{ display: "flex", margin: "auto", marginTop: "200px" }}>
           <div style={{ margin: "auto", marginRight: "0px" }}>
             <img
               style={{
@@ -296,104 +372,671 @@ export default function HomeTop() {
             </button>
           </div>
         </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <h1>Here’s why marketers</h1>{" "}
+        <div
+          style={{
+            display: "flex",
+            marginTop: "250px",
+            justifyContent: "center",
+          }}
+        >
+          <h1 style={{ fontSize: "45px" }}>Here’s why marketers</h1>{" "}
           <img
             style={{
-              height: "50px",
-              marginTop: "20px",
+              height: "70px",
+              marginTop: "25px",
               marginLeft: "20px",
               marginRight: "20px",
             }}
             src="https://c.tenor.com/3Ku-5AN4ZlAAAAAi/orange-heart-symbols.gif"
             alt=""
           />{" "}
-          <h1>Semrush</h1>
+          <h1 style={{ fontSize: "45px" }}>Semrush</h1>
         </div>
-        <div style={{ width: "60%", margin: "auto" }}>
-          <button
-            style={{
-              borderRadius: "20px",
-              fontSize: "17px",
-              background: "none",
-              height: "40px",
-              padding: "0 10px 0 10px",
-              marginLeft: "20px",
-            }}
-          >
-            Marketing Suite
-          </button>
-          <button
-            style={{
-              borderRadius: "20px",
-              fontSize: "17px",
-              background: "none",
-              height: "40px",
-              padding: "0 10px 0 10px",
-              marginLeft: "20px",
-            }}
-          >
-            SEO
-          </button>
-          <button
-            style={{
-              borderRadius: "20px",
-              fontSize: "17px",
-              background: "none",
-              height: "40px",
-              padding: "0 10px 0 10px",
-              marginLeft: "20px",
-            }}
-          >
-            Content marketing
-          </button>
-          <button
-            style={{
-              borderRadius: "20px",
-              fontSize: "17px",
-              background: "none",
-              height: "40px",
-              padding: "0 10px 0 10px",
-              marginLeft: "20px",
-            }}
-          >
-            Market research
-          </button>
-          <button
-            style={{
-              borderRadius: "20px",
-              fontSize: "17px",
-              background: "none",
-              height: "40px",
-              padding: "0 10px 0 10px",
-              marginLeft: "20px",
-            }}
-          >
-            Advertising
-          </button>
-          <button
-            style={{
-              borderRadius: "20px",
-              fontSize: "17px",
-              background: "none",
-              height: "40px",
-              padding: "0 10px 0 10px",
-              marginLeft: "20px",
-            }}
-          >
-            Social media
-          </button>
+
+        <div className="tabs-wrapper">
+          <Tabs>
+            <TabList className="tabs-item-wrap">
+              <Tab className="tabs-item">Marketing Suite</Tab>
+              <Tab className="tabs-item">SEO</Tab>
+              <Tab className="tabs-item">Content marketing</Tab>
+              <Tab className="tabs-item">Market research</Tab>
+              <Tab className="tabs-item">Advertising</Tab>
+              <Tab className="tabs-item">Social media</Tab>
+            </TabList>
+            <div class="tab-body">
+              <TabPanel className="tabs-content">
+                <div className="tabs-content-inner orange-bg">
+                  <div className="arrows-block">
+                    <button
+                      onClick={() => slider?.current?.slickPrev()}
+                      className="slider-arrows"
+                    >
+                      &larr;
+                    </button>
+                    <div className="pagination">
+                      <span className="current-slide">1</span>
+                      <span>/</span>
+                      <span className="total-slide">4</span>
+                    </div>
+                    <button
+                      onClick={() => slider?.current?.slickNext()}
+                      className="slider-arrows"
+                    >
+                      &rarr;
+                    </button>
+                  </div>
+                  <Slider ref={slider} {...settings} className="custom-slider">
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            “I've been using Semrush for 7+ years now and <br />
+                            heavily rely on it to help me move whatever site I'm{" "}
+                            <br />
+                            working on to the top of Google.”
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Casey_Camilleri_Marx.335cc28f69cb.webp"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Casey Camelleri Marx </span>
+                          <span className="position">
+                            Digital Marketing Director, Nylte Software
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            What I appreciate most about Semrush is that it{" "}
+                            <br />
+                            covers all areas of search with its tools, so I can{" "}
+                            <br />
+                            have a 360-degree view of my projects.”
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Esther_Gimenez.442e7b9c274a.jpg"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Esther Giménez</span>
+                          <span className="position">
+                            Senior SEO & UX Consultant, Annalect, Omnicom Media
+                            Group
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            “If you ask an agency to deliver 10x organic search
+                            growth through content, they will assign a large
+                            team to your project. Our content team, in contrast,
+                            runs activities with Semrush without having an army
+                            of people specialized in SEO.”
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Fabrizio_Ballarini.70ae6db20432.jpg"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Fabrizio Ballarini</span>
+                          <span className="position">
+                            Responsible for SEO, TransferWise
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            “When it comes to pure value, Semrush wins. That’s{" "}
+                            <br />
+                            mostly because you get a fully-featured SEO software{" "}
+                            <br />
+                            suite AND Google Ads software for the same monthly{" "}
+                            <br />
+                            price.”
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Brian_Dean.380cb9f99628.jpg"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Brian Dian </span>
+                          <span className="position">Founder, Backlinko</span>
+                        </div>
+                      </div>
+                    </div>
+                  </Slider>
+                </div>
+              </TabPanel>
+              <TabPanel className="tabs-content">
+                <div className="tabs-content-inner yellow-bg">
+                  <div className="arrows-block">
+                    <button
+                      onClick={() => slider?.current?.slickPrev()}
+                      className="slider-arrows"
+                    >
+                      &larr;
+                    </button>
+                    <div className="pagination">
+                      <span className="current-slide">1</span>
+                      <span>/</span>
+                      <span className="total-slide">3</span>
+                    </div>
+                    <button
+                      onClick={() => slider?.current?.slickNext()}
+                      className="slider-arrows"
+                    >
+                      &rarr;
+                    </button>
+                  </div>
+                  <Slider ref={slider} {...settings} className="custom-slider">
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            “We chose Semrush because the keyword tracking was{" "}
+                            <br />
+                            much more accurate than our previous tools and the{" "}
+                            <br />
+                            interface was very intuitive.”
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Freddy_Hunt.4fa7cc5df432.jpg"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Freddy hunt</span>
+                          <span className="position">
+                            Director of SEO and Content Marketing, Oneupweb
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            “There is a direct correlation between using <br />
+                            Semrush, being focused on SEO, and the sheer <br />
+                            growth that we’ve had. Our organic traffic was up by{" "}
+                            <br />
+                            230% in 2019. Literally every day we are getting the{" "}
+                            <br />
+                            highest traffic ever on our website.”
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Eric_Bogard.3e0c4ca3794f.jpg"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Eric Bogard</span>
+                          <span className="position">
+                            VP of Marketing, Arkadium
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            “With the help of Semrush, we empowered every <br />
+                            single marketing team within the university to{" "}
+                            <br /> double their traffic like we did for the
+                            central sites.”
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Shefali_Joshi.59ac6aa23f32.jpg"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Shefali Joshi</span>
+                          <span className="position">
+                            Marketing Optimization Analyst, Monash University
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </Slider>
+                </div>
+              </TabPanel>
+              <TabPanel className="tabs-content">
+                <div className="tabs-content-inner green-bg">
+                  <div className="arrows-block">
+                    <button
+                      onClick={() => slider?.current?.slickPrev()}
+                      className="slider-arrows"
+                    >
+                      &larr;
+                    </button>
+                    <div className="pagination">
+                      <span className="current-slide">1</span>
+                      <span>/</span>
+                      <span className="total-slide">3</span>
+                    </div>
+                    <button
+                      onClick={() => slider?.current?.slickNext()}
+                      className="slider-arrows"
+                    >
+                      &rarr;
+                    </button>
+                  </div>
+                  <Slider ref={slider} {...settings} className="custom-slider">
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            “Our overall organic traffic increased sevenfold,
+                            with <br /> blog traffic making up over 75% of the
+                            visits! <br />
+                            Semrush allowed us to optimize and run our content{" "}
+                            <br />
+                            strategy without needing an army of SEO experts.”
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Barbora_Jassova.cc110ec78bb6.jpg"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Barbora Jassova</span>
+                          <span className="position">
+                            Content Strategist, Landbot
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            “Semrush’s SEO Writing Assistant is one of a kind.{" "}
+                            <br />
+                            I&nbsp;was amazed by the feedback and
+                            recommendations <br /> it provided me to improve my
+                            SEO, text readability, <br /> originality, and tone
+                            of voice.”
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Mesmer_Doue.e37eeaf6eb89.jpg"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Mesmer Doué</span>
+                          <span className="position">
+                            Digital Marketing Consultant, Blue Lance
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            “By using Semrush, my team saves a lot of time by{" "}
+                            <br />
+                            working on the right content and in a more data-{" "}
+                            <br /> driven way. Semrush is my right hand for many
+                            tasks, <br /> it helps me and my team to
+                            strategize.”
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Idan_Segal.1d973e7e94c8.jpg"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Idan Segal</span>
+                          <span className="position">
+                            Organic Growth Lead, Wix
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </Slider>
+                </div>
+              </TabPanel>
+              <TabPanel className="tabs-content">
+                <div className="tabs-content-inner orange-bg">
+                  <div className="arrows-block">
+                    <button
+                      onClick={() => slider?.current?.slickPrev()}
+                      className="slider-arrows"
+                    >
+                      &larr;
+                    </button>
+                    <div className="pagination">
+                      <span className="current-slide">1</span>
+                      <span>/</span>
+                      <span className="total-slide">3</span>
+                    </div>
+                    <button
+                      onClick={() => slider?.current?.slickNext()}
+                      className="slider-arrows"
+                    >
+                      &rarr;
+                    </button>
+                  </div>
+                  <Slider ref={slider} {...settings} className="custom-slider">
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            “When you are at the table with a general manager,
+                            they just want to know the market share. Market
+                            Explorer is the perfect tool to quickly show what
+                            our brand’s role and classification inside the
+                            market are.”
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Emanuele_Arosio.6f67ca5a8abf.jpg"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Emanuele Arosio</span>
+                          <span className="position">
+                            Head of Global SEO, Triboo Group
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            “My favorite part about Semrush is the power it has{" "}
+                            <br />
+                            for competitive intelligence. It makes it easier to{" "}
+                            <br />
+                            make savvy advertising decisions when you have{" "}
+                            <br />
+                            more data.”
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Dignorah_Altamiranda.b11feb049b87.jpg"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Dignorah Altamiranda</span>
+                          <span className="position">
+                            Marketing Team Lead, Avature
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            “I love the feature that lets you analyze the
+                            keyword <br /> and backlink gap with your
+                            competitors. This is very <br /> useful in
+                            determining which keywords you aren't <br /> ranking
+                            for, that you could be getting.”
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Paul_Meluzzo.0d031a702ea5.jpg"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Paul Meluzzo</span>
+                          <span className="position">
+                            Creative Director, Omnislash Visual
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </Slider>
+                </div>
+              </TabPanel>
+              <TabPanel className="tabs-content">
+                <div className="tabs-content-inner purple-bg">
+                  <div className="arrows-block">
+                    <button
+                      onClick={() => slider?.current?.slickPrev()}
+                      className="slider-arrows"
+                    >
+                      &larr;
+                    </button>
+                    <div className="pagination">
+                      <span className="current-slide">1</span>
+                      <span>/</span>
+                      <span className="total-slide">3</span>
+                    </div>
+                    <button
+                      onClick={() => slider?.current?.slickNext()}
+                      className="slider-arrows"
+                    >
+                      &rarr;
+                    </button>
+                  </div>
+                  <Slider ref={slider} {...settings} className="custom-slider">
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            “Semrush has been pivotal in helping me better{" "}
+                            <br />
+                            understand the competitive landscape of my ad <br />
+                            campaigns. I have been able to close the gaps <br />
+                            between my organic and paid efforts thus <br />
+                            distributing my budget and tactics in a <br />
+                            comprehensive manner.”
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Andrea_Cruz.135a4ed74190.jpg"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Andrea Cruz</span>
+                          <span className="position">
+                            Digital Marketing Manager, KoMarketing
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            “My favorite feature is the PPC analysis tool. It
+                            tells <br /> me what kinds of PPC ads are being run
+                            by a specific <br /> domain. It is good to optimize
+                            my own PPC <br />
+                            strategy!”
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Vashishtha_Kapoor.47648a8c7614.jpg"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Vashishtha Kapoor</span>
+                          <span className="position">CoFounder, affNext</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            “With Semrush, I have found weaknesses in PPC for{" "}
+                            <br />
+                            pitches where I was only covering SEO. I've found{" "}
+                            <br />
+                            clients' new competitors they didn't realise they
+                            had <br />
+                            and keywords they could target.”
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Judith_Lewis.d5c40fcacc36.jpg"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Judith Lewis</span>
+                          <span className="position">
+                            Founder, deCabbit Consultancy
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </Slider>
+                </div>
+              </TabPanel>
+              <TabPanel className="tabs-content">
+                <div className="tabs-content-inner pink-bg">
+                  <div className="arrows-block">
+                    <button
+                      onClick={() => slider?.current?.slickPrev()}
+                      className="slider-arrows"
+                    >
+                      &larr;
+                    </button>
+                    <div className="pagination">
+                      <span className="current-slide">1</span>
+                      <span>/</span>
+                      <span className="total-slide">3</span>
+                    </div>
+                    <button
+                      onClick={() => slider?.current?.slickNext()}
+                      className="slider-arrows"
+                    >
+                      &rarr;
+                    </button>
+                  </div>
+                  <Slider ref={slider} {...settings} className="custom-slider">
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            “Semrush Social Media Toolkit is the best in the{" "}
+                            <br />
+                            business. I’m using this tool to great effect and it
+                            has <br /> helped to increase my visibility on
+                            Social Media.”
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Jigar_Agrawal.f06528b22874.jpg"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Jigar Agrawal</span>
+                          <span className="position">
+                            SEO Specialist, freelance
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            “I’ve been using Semrush for the past 5 years now{" "}
+                            <br />
+                            especially for SEO, content writing, and now even
+                            for <br /> social media marketing. ” "
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Himani_Kankaria.845ca1bd239e.jpg"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Himani Kankaria</span>
+                          <span className="position">
+                            eCommerce Consultant and SEO Strategist, eComKeeda
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="slide-item">
+                      <div className="slide-item-inner">
+                        <div className="quote-wrap">
+                          <span style={{ fontSize: "32px" }}>
+                            “Although it’s not a core function of Semrush I
+                            really <br /> like their social media posting tool -
+                            I would give that <br /> a try.”
+                          </span>
+                        </div>
+                        <div className="profile-wrap">
+                          <div className="img-wrap">
+                            <img
+                              src="https://cdn.semrush.com/static/index/testimonials/Trevor_Stolber.83db71a2c4dc.jpg"
+                              alt="Profile"
+                            />
+                          </div>
+                          <span className="name">Trevor Stolber</span>
+                          <span className="position">
+                            Founder, STOLBER Digital Marketing Agency
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </Slider>
+                </div>
+              </TabPanel>
+            </div>
+          </Tabs>
         </div>
-        <div
-          style={{
-            margin: "auto",
-            marginTop: "50px",
-            backgroundColor: "#c9edff",
-            height: "600px",
-            width: "70%",
-            borderRadius: "20px",
-          }}
-        ></div>
 
         <div
           style={{
@@ -414,7 +1057,7 @@ export default function HomeTop() {
               height: "60px",
               width: "400px",
               color: "white",
-              fontSize:"21px",
+              fontSize: "21px",
               backgroundColor: "#ff622d",
               marginLeft: "50px",
               border: "none",
