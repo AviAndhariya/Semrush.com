@@ -2,7 +2,9 @@ export default function Login() {
     return (
       <div style={{
         backgroundColor:"#6edbff",
-        backgroundImage:'url("https://www.semrush.com/static/images/semrushman.4deb494408156a6748f227586cd1491c.svg")'
+        backgroundImage:'url("https://www.semrush.com/static/images/semrushman.4deb494408156a6748f227586cd1491c.svg")',
+        backgroundRepeat:"no-repeat",
+        backgroundPosition:"right",
       }}>
         <div
           style={{
